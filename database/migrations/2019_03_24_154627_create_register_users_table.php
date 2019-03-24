@@ -16,6 +16,9 @@ class CreateRegisterUsersTable extends Migration
         Schema::create('register_users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('fullname');
+            $table->string('address');
+            $table->integer('phoneno');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
